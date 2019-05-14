@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { NextFunctionComponent, NextContext } from "next";
 import Link from "next/link";
 

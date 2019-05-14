@@ -19,5 +19,9 @@ module.exports = {
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
-  rules: {}
+  rules: {
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "react/prop-types": 0
+  }
 };

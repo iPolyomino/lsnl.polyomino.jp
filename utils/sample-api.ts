@@ -13,8 +13,10 @@ export const dataArray: IDataObject[] = [
  *
  * Throws an error if not found.
  */
-export async function findData(id: number | string) {
-  const selected = dataArray.find(data => data.id === Number(id));
+export async function findData(id: number | string): Promise<IDataObject> {
+  const selected: IDataObject | undefined = dataArray.find(
+    data => data.id === Number(id)
+  );
 
   if (!selected) {
     throw new Error("Cannot find user");
@@ -24,7 +26,7 @@ export async function findData(id: number | string) {
 }
 
 /** Calls a mock API which returns the above array to simulate "get all". */
-export async function findAll() {
+export async function findAll(): Promise<IDataObject[]> {
   // Throw an error, just for example.
   if (!Array.isArray(dataArray)) {
     throw new Error("Cannot find users");

@@ -1,16 +1,15 @@
 import * as React from "react";
-import Link from "next/link";
 import Layout from "../components/Layout";
 
 const IndexPage: React.FunctionComponent = () => {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+    <Layout title="Large-Scale Networking Laboratory">
+      <h1>Large-Scale Networking Laboratory</h1>
+      <h2>大規模ネットワーク研究室</h2>
+      <h3>メンバー</h3>
+      <h3>研究内容</h3>
+      <h3>アクセス</h3>
+      <h3>連絡先</h3>
     </Layout>
   );
 };

@@ -42,6 +42,6 @@ A `type-check` script is also added to `package.json`, which runs TypeScript's `
 ## deploy
 
 ```zsh
-docker build -t lsnl-lab .
-docker run --name lsnl -d -p 8080:8080 lsnl-lab
+docker build -t ipolyomino/lab-lsnl .
+docker run --name lab-lsnl -d -p 8080:8080 ipolyomino/lab-lsnl
 ```

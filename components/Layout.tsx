@@ -27,7 +27,7 @@ const Layout: React.FunctionComponent<Props> = ({
         </Link>{" "}
         |{" "}
         <Link href="/software">
-            <a>Software</a>
+          <a>Software</a>
         </Link>{" "}
         |{" "}
       </nav>

@@ -22,6 +22,12 @@ module.exports = {
   rules: {
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        allowTypedFunctionExpressions: true
+      }
+    ],
     "react/prop-types": 0
   }
 };

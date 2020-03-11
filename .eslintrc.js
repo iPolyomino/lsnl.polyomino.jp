@@ -19,6 +19,11 @@ module.exports = {
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   rules: {
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,

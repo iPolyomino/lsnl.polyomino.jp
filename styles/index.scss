@@ -14,7 +14,8 @@ body {
   align-items: center;
 
   h1.intro {
-    font-size: 4vw;
+    margin: 32px;
+    font-size: min(4rem, 15vw);
     position: absolute;
   }
 }

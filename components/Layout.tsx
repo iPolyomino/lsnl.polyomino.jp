@@ -1,6 +1,7 @@
 import * as React from "react";
-import Link from "next/link";
 import Head from "next/head";
+
+import Particles from 'react-particles-js';
 
 interface Props {
   title?: string;
@@ -10,34 +11,37 @@ const Layout: React.FunctionComponent<Props> = ({
   children,
   title = "This is the default title"
 }) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/software">
-          <a>Software</a>
-        </Link>{" "}
-        |{" "}
-      </nav>
-    </header>
+    <Particles params={{
+      "particles": {
+            "number": {
+                "value": 75
+            },
+            "size": {
+                "value": 7
+            },
+        },
+        "interactivity": {
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                }
+            }
+        },
+    }}/>
     {children}
     <footer>
       <hr />
       <span>&copy; {new Date().getFullYear()} Ohsaki Lab</span>
     </footer>
-  </div>
+  </>
 );
 
 export default Layout;

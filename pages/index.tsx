@@ -10,7 +10,7 @@ const IndexPage: React.FunctionComponent = () => {
         <h1 className="intro">
           <Typed
             strings={[
-              "<span>Network</span> <span>Architecture</span> <span>Laboratory</span>"
+              "<span>Network</span> <span>Architecture</span> <span>Laboratory</span>",
             ]}
             typeSpeed={50}
           />

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 
-import Typed from 'react-typed';
+import Typed from "react-typed";
 
 const IndexPage: React.FunctionComponent = () => {
   return (
@@ -9,7 +9,7 @@ const IndexPage: React.FunctionComponent = () => {
       <section className="page">
         <h1 className="intro">
         <Typed
-          strings={['Network Architecture Laboratory']}
+          strings={["<span>Network</span> <span>Architecture</span> <span>Laboratory</span>"]}
           typeSpeed={50}
         />
         </h1>

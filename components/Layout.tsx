@@ -9,7 +9,7 @@ interface Props {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = "This is the default title"
+  title = "This is the default title",
 }) => (
   <>
     <Head>
@@ -22,20 +22,20 @@ const Layout: React.FunctionComponent<Props> = ({
       params={{
         particles: {
           number: {
-            value: 75
+            value: 75,
           },
           size: {
-            value: 7
-          }
+            value: 7,
+          },
         },
         interactivity: {
           events: {
             onhover: {
               enable: true,
-              mode: "repulse"
-            }
-          }
-        }
+              mode: "repulse",
+            },
+          },
+        },
       }}
     />
     {children}

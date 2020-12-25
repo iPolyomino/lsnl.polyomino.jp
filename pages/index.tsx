@@ -8,10 +8,12 @@ const IndexPage: React.FunctionComponent = () => {
     <Layout title="Large-Scale Networking Laboratory">
       <section className="page">
         <h1 className="intro">
-        <Typed
-          strings={["<span>Network</span> <span>Architecture</span> <span>Laboratory</span>"]}
-          typeSpeed={50}
-        />
+          <Typed
+            strings={[
+              "<span>Network</span> <span>Architecture</span> <span>Laboratory</span>"
+            ]}
+            typeSpeed={50}
+          />
         </h1>
       </section>
       <section className="contents">

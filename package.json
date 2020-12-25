@@ -16,7 +16,8 @@
     "next": "^9.3.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-particles-js": "^3.4.1"
+    "react-particles-js": "^3.4.1",
+    "react-typed": "^1.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",

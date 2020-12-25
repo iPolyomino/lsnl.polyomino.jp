@@ -37,10 +37,6 @@ const Layout: React.FunctionComponent<Props> = ({
         },
     }}/>
     {children}
-    <footer>
-      <hr />
-      <span>&copy; {new Date().getFullYear()} Ohsaki Lab</span>
-    </footer>
   </>
 );
 

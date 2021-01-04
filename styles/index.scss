@@ -36,8 +36,10 @@ body {
         font-size: 2rem;
         padding: 16px 0;
       }
-      margin: 32px;
-      min-height: 30vh;
+      p {
+        margin: 16px;
+      }
+      margin: 10vh 16px;
     }
   }
 }

@@ -1,5 +1,8 @@
 import * as React from "react";
 import Layout from "../components/Layout";
+import Word from "../components/Word";
+
+import Laboratory from "../contents/laboratory.json";
 
 import Typed from "react-typed";
 
@@ -18,30 +21,9 @@ const IndexPage: React.FunctionComponent = () => {
       </section>
       <section className="contents">
         <main>
-          <article>
-            <h2>News</h2>
-            hello world
-          </article>
-          <article>
-            <h2>Members</h2>
-            hello world
-          </article>
-          <article>
-            <h2>Research</h2>
-            hello world
-          </article>
-          <article>
-            <h2>Publication</h2>
-            hello world
-          </article>
-          <article>
-            <h2>Access</h2>
-            hello world
-          </article>
-          <article>
-            <h2>Contact</h2>
-            hello world
-          </article>
+          {Laboratory["words"].map((word, index) => (
+            <Word key={index} title={word.title} text={word.text} />
+          ))}
         </main>
       </section>
     </Layout>

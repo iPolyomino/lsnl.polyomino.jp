@@ -2,13 +2,13 @@ module.exports = {
   root: true,
   env: {
     es6: true,
-    node: true
+    node: true,
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: { jsx: true },
     project: "./tsconfig.json",
-    sourceType: "module"
+    sourceType: "module",
   },
   plugins: ["react", "prettier", "@typescript-eslint"],
   extends: [
@@ -16,13 +16,11 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/react"
   ],
   settings: {
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   rules: {
     "@typescript-eslint/interface-name-prefix": 0,
@@ -30,9 +28,9 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
-        allowTypedFunctionExpressions: true
-      }
+        allowTypedFunctionExpressions: true,
+      },
     ],
-    "react/prop-types": 0
-  }
+    "react/prop-types": 0,
+  },
 };

@@ -1,7 +1,12 @@
-import * as React from "react";
+import React, { useCallback } from "react";
+import { loadFull } from "tsparticles";
+import type { Engine, ISourceOptions } from "tsparticles-engine";
 import Head from "next/head";
 
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
+import options from "../contents/particles.json";
+
+const opts = options as ISourceOptions;
 
 interface Props {
   title?: string;
@@ -11,36 +16,22 @@ interface Props {
 const Layout: React.FunctionComponent<Props> = ({
   children,
   title = "This is the default title",
-}) => (
-  <>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
-    </Head>
-    <Particles
-      params={{
-        particles: {
-          number: {
-            value: 75,
-          },
-          size: {
-            value: 7,
-          },
-        },
-        interactivity: {
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse",
-            },
-          },
-        },
-      }}
-    />
-    {children}
-  </>
-);
+}) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Particles init={particlesInit} options={opts} />
+      {children}
+    </>
+  );
+};
 
 export default Layout;

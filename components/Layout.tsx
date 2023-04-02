@@ -5,6 +5,7 @@ import Particles from "react-particles-js";
 
 interface Props {
   title?: string;
+  children: React.ReactNode;
 }
 
 const Layout: React.FunctionComponent<Props> = ({

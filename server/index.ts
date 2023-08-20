@@ -15,7 +15,7 @@ app.prepare().then(() => {
   server
     .listen(port, () => {
       console.log(
-        `> Ready on ${process.env.CLIENT_URL || `http://localhost:${port}`}`
+        `> Ready on ${process.env.CLIENT_URL || `http://localhost:${port}`}`,
       );
     })
     .on("error", console.error);

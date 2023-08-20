@@ -15,7 +15,7 @@ const IndexPage: React.FunctionComponent = () => {
             onInit={(typewriter): void => {
               typewriter
                 .typeString(
-                  "<span>Network</span> <span>Architecture</span> <span>Laboratory</span>"
+                  "<span>Network</span> <span>Architecture</span> <span>Laboratory</span>",
                 )
                 .start();
             }}

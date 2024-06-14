@@ -1,9 +1,9 @@
-import React, { useCallback } from "react";
-import { loadFull } from "tsparticles";
-import type { Engine, ISourceOptions } from "tsparticles-engine";
+import React, { useState, useEffect } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import type { Engine, ISourceOptions } from "@tsparticles/engine";
 import Head from "next/head";
 
-import Particles from "react-tsparticles";
 import options from "../contents/particles.json";
 
 const opts = options as ISourceOptions;
@@ -17,8 +17,14 @@ const Layout: React.FunctionComponent<Props> = ({
   children,
   title = "This is the default title",
 }) => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine: Engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
   return (
@@ -28,7 +34,7 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Particles init={particlesInit} options={opts} />
+      {init && <Particles id="tsparticles" options={opts} />}
       {children}
     </>
   );

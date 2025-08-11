@@ -8,7 +8,7 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = Express.default();
-  server.get("*", (req: Express.Request, res: Express.Response) => {
+  server.get(/.*/, (req: Express.Request, res: Express.Response) => {
     return handle(req, res);
   });
 

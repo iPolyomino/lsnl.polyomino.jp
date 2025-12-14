@@ -9,29 +9,29 @@
     "format": "prettier --write **/*.tsx"
   },
   "dependencies": {
-    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.8.1",
-    "next": "^15.4.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "@tsparticles/slim": "^3.9.1",
+    "next": "^15.5.9",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
-    "@next/eslint-plugin-next": "^15.4.1",
-    "@types/node": "^22.16.3",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "19.1.6",
-    "eslint": "^9.31.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.1",
+    "@eslint/js": "^9.39.2",
+    "@next/eslint-plugin-next": "^15.5.9",
+    "@types/node": "^22.19.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.3.0",
-    "prettier": "^3.6.2",
-    "sass": "^1.89.2",
-    "typescript": "5.8.3",
-    "typescript-eslint": "^8.37.0"
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4",
+    "sass": "^1.96.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.49.0"
   },
   "license": "MIT"
 }

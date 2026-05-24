@@ -23,6 +23,7 @@ export default [
 
       // Config file
       "next.config.js",
+      "next-env.d.ts",
     ],
   },
   {
